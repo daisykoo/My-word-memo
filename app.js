@@ -57,7 +57,7 @@ app.use(function(err, req, res, next) {
 var argv_port = parseInt(process.argv.splice(2));
 port = argv_port || 3000;
 app.listen(port);
-console.log('ToolforGRE started on port: ' + port);
+console.log('My-word-memo started on port: ' + port);
 
 
 module.exports = app;
