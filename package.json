@@ -15,7 +15,6 @@
     "serve-favicon": "~2.3.0"
   },
   "devDependencies": {
-    "jquery": "^2.2.3",
-    "mongoose": "^4.4.16",
+    "mongoose": "^4.4.16"
   }
 }
