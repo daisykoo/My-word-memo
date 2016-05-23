@@ -1,0 +1,70 @@
+.center {
+	text-align: center;
+	margin: 10px auto;
+}
+
+.getWord {
+	margin: 20px 0;
+}
+.form-group {
+	margin-right: 20px;
+}
+.block {
+	height:200px; 
+	width:60%; 
+	margin: 0 auto;
+	margin-top: 20px;
+	padding-top: 50px;
+}
+.en {
+	font-size: 40px;
+	font-weight: bold;
+	text-align: center;
+}
+.cn {
+	display: none; 
+	text-align:center; 
+}
+.progress {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.iframe-wrap {
+	width: 100%;
+	overflow:hidden; 
+	height:280px; 
+	border:1px solid #ddd;
+	margin-top: 30px;
+}
+.iframe {
+	border:0px; 
+	margin-top:-75px;
+	height:400px; 
+	width:100%;
+}
+.review {
+	display: none; 
+	background: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+#reviewList {
+	box-sizing: border-box;
+	height: 300px;
+	width: 300px;
+	padding: 10px 30px; 
+	text-align: left;
+	overflow: scroll;
+	border: 2px solid #ddd;
+	border-radius: 3px;
+	margin: 0 auto;
+}
+
+#inArea {
+	max-width: 500px;
+	margin: 20px 0;
+}

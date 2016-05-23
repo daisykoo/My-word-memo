@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  	<head>
+    	<title><%= title %></title>
+    	<link rel='stylesheet' href='/stylesheets/index.css' />
+    	<link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+  	</head>
+  	<body>
+  		<div class="container">
+	  		<form class="getWord form-inline center">
+	  			<div class="form-group">
+		  			<label for="listName">词表名称</label>
+					<input id="listName" class="form-control" type="text">
+	  			</div>
+	  			<div class="form-group">
+		  			<label for="listNumber">词表编号</label>
+		  			<input id="listNumber" class="form-control" type="text" >
+	  			</div>
+	  			
+				<input class="btn btn-info" id="getWord" type="button" value="开始背单词" >
+	  		</form>
+
+			<div class="block">
+				<p class="en" id="en"></p>
+				<p class="cn" id="cn"></p>
+			</div>
+			
+			<form class="center margin">
+				<input class="btn btn-danger" id="mark" type="button" value="+ ReviewList">
+			</form>
+			<form class = "center">
+				<div class="btn-group">
+					<input class="btn btn-default" id="prep" type="button" value="&laquo&nbsp prep">
+					<input class="btn btn-default" id="show" type="button" value="show">
+					<input class="btn btn-default" id="next" type="button" value="next &nbsp&raquo">
+				</div>
+				
+			</form>
+
+			<div class = "review">
+				<h1>Review List</h1>
+				<p id = "reviewList"></p>
+			</div>
+
+			
+		</div>
+		<div class="iframe-wrap">  
+			<iframe class="iframe" src="http://fanyi.baidu.com/?aldtype=16047#auto/zh" scrolling="no" ></iframe>
+		 </div>
+		<script type="text/javascript" src="/javascripts/jquery-2.2.3.js"></script>
+		<script type="text/javascript" src="/javascripts/underscore.js"></script>
+		<script type="text/javascript" src='/javascripts/index.js'></script>
+		<script type="text/javascript">
+
+		var showLex = function(item) {
+			$('#en').html(_.template(item.en));
+			$('#cn').html(_.template(item.cn));
+		};
+		
+		document.onkeyup = function(e) {
+			if (e.keyCode == 32) {
+				$("#show").click();
+			} else if (e.keyCode == 39) {
+				$("#next").click();
+			} else if (e.keyCode == 37) {
+				$("#prep").click();
+			} else if (e.keyCode == 13) {
+				$("#mark").click();
+			}
+		};
+
+		var reviewList = function() {
+			var reviewList = _.unique(review).join('<br/>');
+			$("#reviewList").html(reviewList);
+			$(".review").show();
+		};
+
+		
+	</script>
+  	</body>
+</html>

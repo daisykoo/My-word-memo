@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title><%= title %></title>
+	<link rel='stylesheet' href='/stylesheets/index.css' />
+	<link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+</head>
+<body>
+	<div class="container">
+		<form class="getWord form-inline ">
+			<div class="form-group">
+				<label for="listName">词表名称</label>
+			<input id="listName" class="form-control" type="text">
+			</div>
+
+			<div class="form-group">
+				<label for="listNumber">词表编号</label>
+				<input id="listNumber" class="form-control" type="text" >
+			</div>
+	  	</form>
+		<textarea id="inArea" class="form-control" rows="20" ></textarea>
+
+		<input id="submit" class="btn btn-info" type="button" value="上传词表"/>
+	</div>
+	
+	<script type="text/javascript" src="/javascripts/jquery-2.2.3.js"></script>
+	<script type="text/javascript" src="/javascripts/underscore.js"></script>
+	<script type="text/javascript" src="/javascripts/input.js"></script>
+
+</body>
+</html>
